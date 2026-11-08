@@ -1,0 +1,11 @@
+# Third-party packages imported by the scripts in this repository.
+# Versions were not recorded; pin them once a working set is confirmed.
+# The README also notes that netCDF4 must be set up for xarray to read .nc4 files.
+pandas
+numpy
+aiohttp
+aiofiles
+requests
+xarray
+tqdm
+beautifulsoup4

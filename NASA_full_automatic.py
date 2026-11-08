@@ -173,7 +173,8 @@ if __name__ == '__main__':
         os.makedirs('NASA_downloads')
 
     # Step 1: make sure the cookies are still valid. cookies need to updated every one week.
-    cookies_text = ''
+    # Earthdata login cookies are personal credentials: set them in the EARTHDATA_COOKIES environment variable.
+    cookies_text = os.environ.get('EARTHDATA_COOKIES', '')
     cookies = create_cookies(cookies_text)
 
 

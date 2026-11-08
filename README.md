@@ -98,7 +98,22 @@ pip install -r requirements.txt
 ## 🔑 API & Credentials
 
 - **OpenCage API Key:** Replace the `API_KEY` in `main.py` with your own.
-- **NASA EarthData Cookies:** You must provide valid cookies to access protected datasets. Update `cookies_text` in `NASA_full_automatic.py`.
+- **NASA EarthData Cookies:** You must provide valid cookies to access protected datasets. Set them in the `EARTHDATA_COOKIES` environment variable; never paste them into the code.
+
+---
+
+## Data
+
+- **Sources:** competition calendars and results from the World Athletics website and its GraphQL endpoint (`update-athlete.py`); venue coordinates from the OpenCage Geocoding API (`main.py`); environmental variables from NASA EarthData download lists stored under `NASA/` (`NASA_full_automatic.py`).
+- **Local inputs the scripts expect:** `payload.json` (GraphQL query settings), `updated_data.csv` (results from the previous scrape), `raw_data.dta` or `data_with_city_name.csv` (for `main.py`), NASA URL lists in `NASA/`, and country files in `country/` with `lat`, `lon` and city name columns.
+- **Not in the repository:** none of these inputs or any outputs are included. `.gitignore` excludes `.csv`, `.dta`, `.xlsx`, `.parquet` and `.nc` files. Competition results include athlete-level records, so treat them as personal data.
+- `requirements.txt` is now included for the `pip install -r requirements.txt` command above.
+
+---
+
+## Running time
+
+Not recorded.
 
 ---
 
